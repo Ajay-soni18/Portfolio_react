@@ -4,14 +4,14 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "EcoReport-Platform",
       description:
-        "A full-stack e-commerce platform built with React, Node.js, and PostgreSQL",
+        "A Platform For MNIT users To Report Environmental Issues in the campus",
       image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=500",
-      technologies: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdTt6-9f9zX_MRi0JgcTULo_HZaa_etjHXOg&s",
+      technologies: ["HTML", "CSS", "JavascriptL", "Node.js"],
+      githubUrl: "https://github.com/Ajay-soni18/EcoReport-Platform",
+      liveUrl: "https://ajay-soni18.github.io/EcoReport-Platform/",
     },
     {
       title: "Task Management App",
@@ -36,35 +36,35 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">
+    <div className="min-h-screen pt-16 transition-colors duration-200 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <h2 className="mb-16 text-4xl font-bold text-center text-gray-900 dark:text-white">
           Featured Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-colors duration-200"
+              className="overflow-hidden transition-colors duration-200 bg-white shadow-lg dark:bg-gray-800 rounded-xl"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="object-cover w-full h-48"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="mb-4 text-gray-600 dark:text-gray-300">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 rounded-full text-sm"
+                      className="px-3 py-1 text-sm text-indigo-600 bg-indigo-100 rounded-full dark:bg-indigo-900 dark:text-indigo-300"
                     >
                       {tech}
                     </span>

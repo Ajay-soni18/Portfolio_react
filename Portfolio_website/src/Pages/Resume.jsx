@@ -1,41 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import resumePdf from "../Assets/Resume.pdf";
+import resumePdf from "/src/Assets/Resume.pdf";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-function ResumeNew() {
-  const [width, setWidth] = useState(1200);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
-
+function ResumeViewer() {
   return (
-    <div className="resume-container">
-      <div className="resume-header">
-        <a href={resumePdf} download className="download-btn">
-          <AiOutlineDownload />
-          &nbsp;Download Resume
-        </a>
+    <div className="flex flex-col items-center min-h-screen pt-16 transition-colors duration-200 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="w-full max-w-4xl p-4 rounded-lg shadow-lg">
+        <iframe
+          src={resumePdf}
+          title="Resume"
+          className="w-full h-screen border rounded-lg"
+        ></iframe>
       </div>
 
-      <div className="resume-content">
-        <Document file={resumePdf} className="pdf-viewer">
-          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-        </Document>
-      </div>
-
-      <div className="resume-footer">
-        <a href={resumePdf} download className="download-btn">
-          <AiOutlineDownload />
-          &nbsp;Download Resume
+      <div className="mb-4">
+        <a
+          href={resumePdf}
+          download
+          className="inline-flex items-center px-4 py-2 bg-blue-600 rounded-lg shadow-md hover:bg-blue-700"
+        >
+          <AiOutlineDownload className="mr-2" />
+          Download Resume
         </a>
       </div>
     </div>
   );
 }
 
-export default ResumeNew;
+export default ResumeViewer;

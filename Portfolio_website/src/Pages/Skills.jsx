@@ -6,16 +6,28 @@ const Skills = () => {
       category: "Frontend",
       technologies: [
         {
-          name: "React",
-          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+          name: "HTML",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+        },
+        {
+          name: "CSS",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
         },
         {
           name: "JavaScript",
           icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
         },
         {
-          name: "Tailwind CSS",
-          icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+          name: "React",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+        },
+        {
+          name: "Redux",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
         },
       ],
     },
@@ -27,12 +39,16 @@ const Skills = () => {
           icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
         },
         {
-          name: "Python",
-          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+          name: "ExpressJS",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
         },
         {
-          name: "PostgreSQL",
-          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+          name: "MongoDB",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+        },
+        {
+          name: "SQL",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
         },
       ],
     },
@@ -44,31 +60,35 @@ const Skills = () => {
           icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
         },
         {
-          name: "Docker",
-          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+          name: "GitHub",
+          icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
         },
         {
           name: "VS Code",
           icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+        },
+        {
+          name: "Postman",
+          icon: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
         },
       ],
     },
   ];
 
   return (
-    <div className="min-h-screen pt-16 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">
+    <div className="min-h-screen pt-16 transition-colors duration-200 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <h2 className="mb-16 text-4xl font-bold text-center text-gray-900 dark:text-white">
           Skills & Technologies
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           {skills.map((skillCategory) => (
             <div
               key={skillCategory.category}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transition-colors duration-200"
+              className="p-8 transition-colors duration-200 bg-white shadow-lg dark:bg-gray-800 rounded-xl"
             >
-              <h3 className="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">
+              <h3 className="mb-6 text-2xl font-semibold text-indigo-600 dark:text-indigo-400">
                 {skillCategory.category}
               </h3>
               <div className="grid grid-cols-3 gap-6">
