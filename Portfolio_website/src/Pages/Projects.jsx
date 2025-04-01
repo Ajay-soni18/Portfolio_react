@@ -14,13 +14,13 @@ const Projects = () => {
       liveUrl: "https://ajay-soni18.github.io/EcoReport-Platform/",
     },
     {
-      title: "Task Management App",
+      title: "Currency-Converter",
       description:
-        "A collaborative task management application with real-time updates",
+        "A currency converter built with React, Fetching real-time exchange rates from an API",
       image:
-        "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=500",
-      technologies: ["React", "Firebase", "Material-UI"],
-      githubUrl: "https://github.com",
+        "https://img.freepik.com/premium-vector/currency-converter-concept-2-colored-icon-simple-blue-element-illustration-currency-converter-concept-symbol-design-can-be-used-web-mobile-ui-ux_159242-4458.jpg",
+      technologies: ["React", "API"],
+      githubUrl: "https://github.com/Ajay-soni18/Currency-Converter",
       liveUrl: "https://example.com",
     },
     {
