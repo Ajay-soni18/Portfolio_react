@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import React from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar = ({ darkMode, setDarkMode }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
   const location = useLocation();
 
   const navItems = [
@@ -25,23 +25,41 @@ const Navbar = () => {
             Portfolio
           </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`${
-                  location.pathname === item.path
-                    ? "text-indigo-600 dark:text-indigo-400"
-                    : "text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
-                } transition-colors duration-200`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            <div className="flex items-center space-x-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`${
+                    location.pathname === item.path
+                      ? "text-indigo-600 dark:text-indigo-400"
+                      : "text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+                  } transition-colors duration-200`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 text-gray-600 transition-colors duration-200 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
           </div>
 
+          {/* Mobile menu button and dark mode toggle */}
           <div className="flex items-center space-x-4 md:hidden">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 text-gray-600 transition-colors duration-200 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
@@ -52,6 +70,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 transition-colors duration-200 bg-white sm:px-3 dark:bg-gray-800">

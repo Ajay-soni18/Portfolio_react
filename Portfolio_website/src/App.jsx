@@ -13,10 +13,11 @@ function App() {
   return (
     <Router>
       <div className={`min-h-screen ${darkMode ? "dark" : ""}`}>
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+        <div className="min-h-screen transition-colors duration-200 bg-gray-50 dark:bg-gray-900">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Portfolio_react" element={<Home />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
