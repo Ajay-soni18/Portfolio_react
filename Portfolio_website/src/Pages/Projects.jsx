@@ -21,7 +21,7 @@ const Projects = () => {
         "https://img.freepik.com/premium-vector/currency-converter-concept-2-colored-icon-simple-blue-element-illustration-currency-converter-concept-symbol-design-can-be-used-web-mobile-ui-ux_159242-4458.jpg",
       technologies: ["React", "API"],
       githubUrl: "https://github.com/Ajay-soni18/Currency-Converter",
-      liveUrl: "https://example.com",
+      liveUrl: "https://ajay-soni18.github.io/Currency-Converter/",
     },
     {
       title: "Weather Dashboard",
@@ -29,9 +29,9 @@ const Projects = () => {
         "A weather dashboard that displays current and forecasted weather data",
       image:
         "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=500",
-      technologies: ["React", "OpenWeather API", "Chart.js"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      technologies: ["React", "OpenWeather API"],
+      githubUrl: "https://github.com/Ajay-soni18/Weather-App-React",
+      liveUrl: "https://ajay-soni18.github.io/Weather-App-React/",
     },
   ];
 
